@@ -1,0 +1,61 @@
+.bodys{
+    display: flex;
+    background-color: rgb(31, 31, 31);
+}
+
+.pan{
+    width: 87%;
+}
+
+.top{
+    display: flex;
+    width: auto;
+    max-width: 100%;
+}
+
+.btm{
+    display: flex;
+}
+
+.sobrae{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.tabl_emp{
+    width: 85%;
+    background-color: black;
+    border-radius: 20px;
+    margin-top: 20px;
+}
+
+.tabl_emp > thead > tr > th{
+    background-color: black;
+    color: white;
+    padding: 10px;
+    border-radius: 20px;
+}
+
+.tabl_emp > tbody > tr > td{
+    justify-content: center ;
+    padding: 10px;
+    color: white;
+    text-align: center;
+}
+
+.icono{
+    margin: 0px 10px;
+    font-size: 16px;
+}
+
+.iconox{
+    margin: 0px 10px;
+    font-size: 20px;
+}
+
+.opp{
+    font-size: 22px;
+}

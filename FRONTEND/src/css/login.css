@@ -1,0 +1,124 @@
+.fon{
+    width: auto; /* Ancho de la ventana del navegador */
+    height: 100vh; /* Altura de la ventana del navegador */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+}
+
+.cuadro{
+    border-radius: 20px;
+    box-shadow: 0px 0px 20px 3px red;
+    margin: auto;
+    margin-top: 100px;
+    padding: 20px;
+    max-width: 23%;
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(0, 0, 0); /* Un color de fondo semi-transparente */
+    height: auto;
+    min-height: 550px;
+}
+
+.cuadro > h1{
+    color: white;
+    margin: 0px 30px 50px 30px;
+    font-size: 40px;
+}
+
+.cuadro > button{
+    width: 100%;
+    height: 50px;
+    color: white;
+    font-size: 20px;
+    border: none;
+    border-radius: 10px;
+    margin-top: 80px;
+    cursor: pointer;
+    background-color: red;
+}
+
+.cuadro > button:hover{
+    background-color: rgb(158, 0, 0);
+}
+
+.imm{
+    font-size: 150px;
+    margin-bottom: 40px;
+    border-radius: 100%;
+    padding: 10px;
+    background-color: rgba(143, 143, 143, 0.301);
+    color: rgba(255, 255, 255, 0.596);
+}
+
+.usuar{
+    align-items: center;
+    display: flex;
+    height: 50px;
+    margin-bottom: 10px;
+    margin-top: 20px;
+}
+
+.usuar > input{
+    height: 50px;
+    width: 100%;
+    padding-left: 40px;
+    font-size: 25px;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    background-color: transparent;
+    border-color: white;
+    color: white;
+    outline: none;
+}
+
+.fa-user{
+    position: absolute;
+    color: white;
+    font-size: 25px;
+}
+
+.contra{
+    align-items: center;
+    display: flex;
+    height: 50px;
+    margin-bottom: 10px;
+}
+
+.contra > input{
+    height: 50px;
+    width: 100%;
+    padding-left: 40px;
+    font-size: 25px;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    background-color: transparent;
+    border-color: white;
+    color: white;
+    outline: none;
+
+}
+
+.fa-lock{
+    position: absolute;
+    color: white;
+    font-size: 25px;
+}
+
+.remen{
+    display: flex;
+    color: white;
+    width: 100%;
+    margin-top: 5px;
+}
+
+.remen > input{
+    margin-right: 10px;
+}

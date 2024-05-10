@@ -1,0 +1,36 @@
+.cua{
+    width: auto;
+    max-width: 40%;
+    min-width: 23%;
+    margin: 20px 10px 0 10px;
+}
+
+.pre{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 10px;
+    color: white;
+}
+
+.let > h1{
+    font-size: 45px;
+    margin: 10px 10px 10px 10px;
+}
+
+
+
+.ico-user{
+    color: rgba(2, 2, 2, 0.253);
+    font-size: 80px;
+}
+
+.mas{
+    background-color: rgba(39, 39, 39, 0.432);
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px;
+    color: white;
+    font-size: 20px;
+    align-items: center;
+}
