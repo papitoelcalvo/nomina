@@ -7,8 +7,7 @@ import { IoClose } from "react-icons/io5";
 import axios from 'axios';
 import Modal from 'react-bootstrap/Modal';
 import { RxReader } from "react-icons/rx";
-import Button from 'react-bootstrap/Button';
-import { useParams } from 'react-router-dom';
+import Muet_empl from '../components/muestra/muet_empl';
 
 
 const Usiario = () => {
@@ -31,12 +30,6 @@ const Usiario = () => {
     sueldo: {}
   })
 
-   const {idempleado} = useParams();
-   useEffect(()=>{
-    axios.get('http://localhost:3001/usuarios/'+idempleado)
-    .then(res => console.log(res))
-    .catch(err => console.log(err))
-   }, [])
 
   const modalStyle = {
     position: 'absolute',
@@ -159,9 +152,10 @@ const Usiario = () => {
         <Modal show={muestra} onHide={muestraClose} centered style={modalStyle}>
           <Modal.Header closeButton>
             <Modal.Title>Datos del empleado</Modal.Title>
+            <button onClick={muestraClose}>cerrar</button>
           </Modal.Header>
-          <Modal.Body>
-          <button onClick={muestraClose}>cerrar</button>
+          <Modal.Body>              
+            <Muet_empl/>
           </Modal.Body>
         </Modal>
 

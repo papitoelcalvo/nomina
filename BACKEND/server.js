@@ -32,8 +32,8 @@ app.post("/usuarios/", (req, res) => {
   });
 });
 
-app.get("/usuarios/:id", (req, res) => {
-  const id = req.params.id;
+app.get("/usuarios/:idempleado", (req, res) => {
+  const id = req.params.idempleado;
   const sql =
     "SELECT empleado.idempleado, empleado.nombre_empleado, empleado.apellido, departamento.nombre_depar, puesto.nombre_pues, empresa.nombre, sueldos.sueldo FROM empleado INNER JOIN departamento ON departamento.iddepartamento = empleado.departamento INNER JOIN puesto ON puesto.idpuesto = empleado.puesto_emp  INNER JOIN empresa ON empresa.idempresa = empleado.empresa_emp INNER JOIN sueldos ON sueldos.idsueldos = empleado.sueldos_emp WHERE idempleado = ? ";
   db.query(sql, id, (err, result) => {
