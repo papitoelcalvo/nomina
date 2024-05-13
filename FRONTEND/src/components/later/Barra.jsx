@@ -39,7 +39,7 @@ function Barra() {
           { isEMOpen&& (
             <ul>
               <li><FaIdCardClip/><Link className='lin' to={'/cargos'}>CARGOS</Link></li>
-              <li><RiCalendarScheduleFill/><Link className='lin' to={'/horario'}>HORARIOS</Link></li>
+              <li><RiCalendarScheduleFill/><Link className='lin' to={'/horarios'}>HORARIOS</Link></li>
               <li><FaUser/><Link className='lin' to={'/usuario'}>EMPLEADOS</Link></li>
               <li><FaUserClock/><Link className='lin' to={'/asistencia'}>ASISTENCIA</Link></li>
               <li><FaBuilding/><Link className='lin' to={'/empresa'}>EMPRESA</Link></li>

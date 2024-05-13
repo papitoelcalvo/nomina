@@ -1,0 +1,56 @@
+
+.cra_emp{
+    display: flex;
+    justify-content: space-around;
+}
+
+.form_emp{
+    margin: 10px;
+    color: white;
+    font-size: 23px;
+}
+
+.form_emp > input{
+    width: 100%;
+    height: 35px;
+    border: 1px white solid;
+    border-radius: 10px;
+    background: none;
+    color: white;
+    padding: 5px;
+    font-size: 17px;
+    margin-top: 5px;
+}
+
+.form_emp > select{
+    width: 100%;
+    height: 35px;
+    border: 1px white solid;
+    border-radius: 10px;
+    color: white;
+    background-color: black;
+    padding: 5px;
+    font-size: 17px;
+    margin-top: 5px;
+}
+
+.but{
+    display: flex;
+    justify-content: center;
+}
+
+.but > button{
+    width: 80%;
+    height: 40px;
+    margin: 50px 10px 10px 10px;
+    background-color: rgb(185, 0, 0);
+    border-radius: 10px;
+    border: none;
+    color: white;
+    font-size: 20px;
+}
+
+.but > button:hover{
+    background-color: rgb(124, 0, 0);
+    color: rgb(160, 160, 160);
+}

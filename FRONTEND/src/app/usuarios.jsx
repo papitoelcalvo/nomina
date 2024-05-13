@@ -7,7 +7,7 @@ import { IoClose } from "react-icons/io5";
 import axios from 'axios';
 import Modal from 'react-bootstrap/Modal';
 import { RxReader } from "react-icons/rx";
-import Muet_empl from '../components/muestra/muet_empl';
+import CrearEmpleado from '../components/crear/CrearEmpleado';
 
 
 const Usiario = () => {
@@ -18,18 +18,7 @@ const Usiario = () => {
     axios.get('http://localhost:3001/empleados')
     .then(res => setData(res.data))
     .catch(err => console.log(err));
-  }, [])
-
-  const [values, setValues] = useState({
-    id: {},
-    nombre: '',
-    apellido: '',
-    departamento: {},
-    puesto: {},
-    empresa: {},
-    sueldo: {}
-  })
-
+  }, []);
 
   const modalStyle = {
     position: 'absolute',
@@ -38,14 +27,7 @@ const Usiario = () => {
     transform: 'translate(-50%, -50%)',
     background: 'white',
     width: '80%',
-    height: '80vh'
-  };
-
-  const handleSunmit = (e) => {
-    e.preventDefault();
-    axios.post('http://localhost:3001/usuarios', values)
-    .then(res => console.log(res))
-    .catch(err => console.log(err));
+    height: '80vh',
   }
 
   const [crea, setCrea] = useState(false);
@@ -71,18 +53,7 @@ const Usiario = () => {
   
     setEdit(true);
   };
-  const editaClose = () => setEdit(false);
-
-  const [elimina, setEli] = useState(false);
-  const eliminaShow = (idempleado) => {
-    axios.get(`http://localhost:3001/usuarios/${idempleado}`)
-      .then(res => console.log(res))
-      .catch(err => console.log(err));
-  
-    setEli(true);
-  };
-  const eliminaClose = () => setEli(false);
-
+  const editaClose = () => setEdit(false)
 
   return (
     <div className='bodys'>
@@ -93,59 +64,13 @@ const Usiario = () => {
           <div className="btncreaem">
             <button className='crear_emplead' onClick={crealeShow}>Nuevo Empleado</button>
           </div>
-        <Modal show={crea} onHide={creaClose} centered style={modalStyle}>
-          <Modal.Header closeButton>
+        <Modal show={crea} onHide={creaClose} className='modal' backdrop={'static'}>
+          <Modal.Header className='modal_header'>
             <Modal.Title>Nuevo Empleado</Modal.Title>
+            <IoClose className='CreaCerrar' onClick={creaClose}/>
           </Modal.Header>
-          <Modal.Body>
-            <form className="cra_emp" onSubmit={handleSunmit} >
-            <div className="form_emp">
-                <label>id</label>
-                <input type="text" onChange={e => setValues({...values, id: e.target.value})}/>
-              </div>
-
-              <div className="form_emp">
-                <label>Nombre</label>
-                <input type="text" onChange={e => setValues({...values, nombre: e.target.value})}/>
-              </div>
-              <div className="form_emp">
-                <label>Apellido</label>
-                <input type="text" onChange={e => setValues({...values, apellido: e.target.value})}/>
-              </div>
-              <div className="form_emp">
-                <label>Departamento</label>
-                <select onChange={e => setValues({...values, departamento: e.target.value})}>
-                  <option value="">Seleccionar</option>
-                  <option value="1">1</option>
-                  <option value="2">2</option>
-                </select>
-              </div>
-              <div className="form_emp">
-                <label>Puesto</label>
-                <select onChange={e => setValues({...values, puesto: e.target.value})}>
-                  <option value="">Seleccionar</option>
-                  <option value={1}>1</option>
-                  <option value={2}>2</option>
-                </select>
-              </div>
-              <div className="form_emp">
-                <label>Empresa</label>
-                <select onChange={e => setValues({...values, empresa: e.target.value})}>
-                  <option value="">Seleccionar</option>
-                  <option value="1">1</option>
-                  <option value="2">2</option>
-                </select>
-              </div>
-              <div className="form_emp">
-                <label>Sueldo</label>
-                <input type="text" onChange={e => setValues({...values, sueldo: e.target.value})}/>
-              </div>
-
-              <div className="but">
-                <button type='Submit' onClick={creaClose}>crear</button>
-                <button onClick={creaClose}>cerrar</button>
-              </div>
-            </form>
+          <Modal.Body className='modal_body'>
+            <CrearEmpleado/>
           </Modal.Body>
         </Modal>
 
@@ -155,7 +80,6 @@ const Usiario = () => {
             <button onClick={muestraClose}>cerrar</button>
           </Modal.Header>
           <Modal.Body>              
-            <Muet_empl/>
           </Modal.Body>
         </Modal>
 
@@ -184,7 +108,7 @@ const Usiario = () => {
               {data.map((empleado, index) =>{
                 return(
                   <tr key={index}>
-                    <td>{empleado.idempleado}</td>
+                    <td className='ID'><p>DF</p>{empleado.idempleado}</td>
                     <td>{empleado.nombre_empleado}</td>
                     <td>{empleado.apellido}</td>
                     <td>{empleado.nombre_depar}</td>
